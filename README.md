@@ -1,2 +1,2 @@
-# 2023-II
-Curso de Programación II - Programa de Ingeniería de Sistemas - Universidad Popular del Cesar - Periodo académico 2023-II
+# 2023-II - Programacion II - Universidad Popular del Cesar
+Curso de Programación II del Programa de Ingeniería de Sistemas de la Universidad Popular del Cesar Periodo académico 2023-II
