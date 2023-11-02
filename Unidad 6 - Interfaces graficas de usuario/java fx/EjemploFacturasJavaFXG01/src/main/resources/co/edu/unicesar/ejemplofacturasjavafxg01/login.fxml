@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="715.0" prefWidth="953.0" style="-fx-background-color: #FFFFFF;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/13" fx:controller="co.edu.unicesar.ejemplofacturasjavafxg01.controllers.LoginController">
+   <children>
+      <HBox layoutX="-2.0" layoutY="-1.0" prefHeight="715.0" prefWidth="953.0">
+         <children>
+            <VBox prefHeight="715.0" prefWidth="293.0" />
+            <VBox prefHeight="715.0" prefWidth="458.0" spacing="5.0">
+               <children>
+                  <ImageView fitHeight="351.0" fitWidth="436.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../../../images/lado-frontal-usuario-fondo-blanco.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label text="Username:">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtUsername">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </TextField>
+                  <Label text="Password:">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="txtPassword">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </PasswordField>
+                  <HBox alignment="CENTER" prefHeight="95.0" prefWidth="436.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="brnLogin" mnemonicParsing="false" onAction="#clickLogin" prefHeight="50.0" prefWidth="175.0" text="Login">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#clickCancelar" prefHeight="50.0" prefWidth="177.0" text="Cancelar">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="715.0" prefWidth="277.0" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
