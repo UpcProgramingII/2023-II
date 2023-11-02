@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="888.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.main.controlador.UsuariosController">
+   <children>
+      <Label alignment="CENTER" prefHeight="123.0" prefWidth="848.0" style="-fx-background-color: #FFFFFF;" text="Usuarios Registrados">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="20.0" right="20.0" />
+         </VBox.margin>
+      </Label>
+      <HBox prefHeight="646.0" prefWidth="848.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <TableView fx:id="tableUsers" onMouseClicked="#clickTableUser" prefHeight="614.0" prefWidth="576.0">
+              <columns>
+                <TableColumn fx:id="tableColumnUser" prefWidth="75.0" text="UserName" />
+                <TableColumn fx:id="tableColumnPassword" prefWidth="75.0" text="Password" />
+                  <TableColumn fx:id="tableColumnNombre" prefWidth="75.0" text="Nombre (s)" />
+                  <TableColumn fx:id="tableColumnApellido" prefWidth="75.0" text="Apellido (s)" />
+                  <TableColumn fx:id="tableColumnPrivilegio" prefWidth="75.0" text="Rol" />
+              </columns>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <VBox prefHeight="646.0" prefWidth="275.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Label style="-fx-background-color: #ffffff;" text="Primer  Nombre:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtNombre">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextField>
+                  <Label style="-fx-background-color: #ffffff;" text="Segundo Nombre:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtApellido">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextField>
+                  <Label style="-fx-background-color: #ffffff;" text="UserName">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtUserName" onKeyTyped="#keyTypedtxtUserName">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextField>
+                  <Label style="-fx-background-color: #ffffff;" text="Password:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="txtPassword" onKeyTyped="#keyTypedtxtPassword">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </PasswordField>
+                  <Label style="-fx-background-color: #ffffff;" text="Privilegios:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cmbPrivilegio" prefHeight="42.0" prefWidth="274.0" />
+                  <Button fx:id="btnCrear" mnemonicParsing="false" onAction="#actionBtnCrear" prefHeight="45.0" prefWidth="258.0" text="Crear">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnModificar" mnemonicParsing="false" onAction="#actionBtnModificar" prefHeight="45.0" prefWidth="267.0" text="Modificar">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#actionBtnEliminar" prefHeight="45.0" prefWidth="264.0" text="Eliminar">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#actionBtnCancelar" prefHeight="45.0" prefWidth="259.0" text="Cancelar">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets left="20.0" right="20.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>
