@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="703.0" prefWidth="944.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.unicesar.ejemplofacturasjavafxg01.controllers.RegistroController">
+   <children>
+      <VBox prefHeight="724.0" prefWidth="924.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="99.0" prefWidth="924.0" text="Registro de Facturas" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="45.0" />
+               </font>
+            </Label>
+            <Label text="No Factura:">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtNoFactura" prefHeight="57.0" prefWidth="924.0" promptText="No factura">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </TextField>
+            <Label text="Valor factura:">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtValorFactura" prefHeight="57.0" prefWidth="924.0" promptText="Valor factura">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </TextField>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <VBox prefHeight="100.0" prefWidth="381.0">
+                     <children>
+                        <Label text="Fecha factura:">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="dpFechaFactura" prefHeight="57.0" prefWidth="379.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="100.0" prefWidth="542.0">
+                     <children>
+                        <Label text="Tipo Factura:">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="51.0" prefWidth="924.0">
+                           <children>
+                              <RadioButton fx:id="rContado" mnemonicParsing="false" onAction="#clickContado" prefHeight="37.0" prefWidth="175.0" selected="true" text="Contado">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="tipo" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="rCredito" mnemonicParsing="false" onAction="#clickCredito" prefHeight="37.0" prefWidth="266.0" text="Credito" toggleGroup="$tipo">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </RadioButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <VBox prefHeight="100.0" prefWidth="378.0">
+                     <children>
+                        <Label text="Medio de pago:">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="cmbMedioPago" prefHeight="57.0" prefWidth="383.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="100.0" prefWidth="441.0">
+                     <children>
+                        <Label text="Fecha pago:">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="dpFechaPago" prefHeight="57.0" prefWidth="364.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Label text="Plazo maximo:">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtPlazoMaximo" prefHeight="57.0" prefWidth="100.0" promptText="Plazo maximo">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </TextField>
+            <HBox alignment="CENTER_RIGHT" prefHeight="112.0" prefWidth="924.0" spacing="20.0">
+               <children>
+                  <Button fx:id="btnGuardar" mnemonicParsing="false" onAction="#clickGuardar" prefHeight="67.0" prefWidth="240.0" text="Guardar">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#clickCancelar" prefHeight="67.0" prefWidth="240.0" text="Cancelar">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <StackPane.margin>
+            <Insets left="10.0" right="10.0" />
+         </StackPane.margin>
+      </VBox>
+   </children>
+</StackPane>
